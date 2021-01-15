@@ -4,7 +4,9 @@
       public $posti_letto;
       public $fumatori;
 
-      function __construct($fumatori) {
+      function __construct($numero,$posti_letto,$fumatori) {
+         $this->numero = $numero;
+         $this->posti_letto = $posti_letto;
          $this->fumatori = $fumatori;
       }
 
@@ -13,13 +15,8 @@
       }
    }
 
-   $stanza_1 = new Stanza("No");
-   $stanza_1->numero = 1;
-   $stanza_1->posti_letto = 4;
-
-   $stanza_2 = new Stanza("Si");
-   $stanza_2->numero = 2;
-   $stanza_2->posti_letto = 2;
+   $stanza_1 = new Stanza(1,4,"No");
+   $stanza_2 = new Stanza(2,2,"Si");
 
    echo
       $stanza_1->info() .
